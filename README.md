@@ -126,4 +126,4 @@ See:
 
 ## License
 
-MIT for the repository code. ROMs and third-party test suites may have separate licenses.
+GNU-General Public license v3.0
