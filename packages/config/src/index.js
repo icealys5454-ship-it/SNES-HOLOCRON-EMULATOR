@@ -1,0 +1,1 @@
+export const qualificationPolicy=Object.freeze({abiMajor:1,compatibilityMinimum:95,determinismRequired:true,stateRoundTripRequired:true,regressionBudget:0,productionLaunchRequiresSignedAttestation:true});

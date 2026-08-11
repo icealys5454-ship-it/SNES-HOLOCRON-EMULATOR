@@ -1,0 +1,3 @@
+export function compatibilityScore(results){if(!results.length)return 0;return Math.round(results.filter(r=>r.pass).length*100/results.length);}
+export function classifyCompatibility(score){if(score>=95)return "release-qualified";if(score>=80)return "playable";if(score>=60)return "major-issues";return "failed";}
+export function compareBuilds(base,candidate){const oldMap=new Map(base.map(r=>[r.id,r]));const current=new Map(candidate.map(r=>[r.id,r]));const regressions=[];for(const [id,old] of oldMap){const next=current.get(id);if(old.pass&&next&&!next.pass)regressions.push(id);}return {pass:regressions.length===0,regressions};}
